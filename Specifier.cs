@@ -8,7 +8,7 @@ namespace Date07_25
 {
     internal class Specifier //지정자
     {
-        public static void Main()
+        public static void Main1()
         {
             // bool bigger = Compare(3, 2, Bigger);
             // bool less = Compare(3, 5, Less);
