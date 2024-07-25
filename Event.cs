@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Date07_25
 {
-    internal class Event
+    public class Event
     {
 
         public static void Main()
@@ -28,7 +28,7 @@ namespace Date07_25
             Console.WriteLine("음소거했습니다.");
             player.OnDied -= sound.DeadSound;
 
-            player.OnDied = cam.Shake;
+            player.OnDied = cam.Shake; // 대입을 해버리면 이전게 다 사라짐
 
             player.Die();
 
@@ -77,9 +77,9 @@ namespace Date07_25
 
         public class Player
         {
-            public Action OnDamaged;
+            public event Action OnDamaged;
 
-            public Action OnDied; // 이벤트
+            public event Action OnDied; // 이벤트
 
             public void TakeDamage()
             {
